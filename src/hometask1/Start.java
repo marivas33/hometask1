@@ -4,7 +4,6 @@ public class Start {
 
    public static void main(String[] args){
        
-
        int addResult = Calculator.add(5 ,7);
        System.out.println(addResult);
        System.out.println(Calculator.add(7D, 5.3));
