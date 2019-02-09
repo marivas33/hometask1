@@ -10,14 +10,14 @@ public class Password {
         char number[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
         char symbol[] = {'!', '@', '#', '%', '_'};
 
-        int symbol1 = Helper.getRandom(0, 5);
-        int number1 = Helper.getRandom(0, 9);
-        int number2 = Helper.getRandom(0, 9);
-        int number3 = Helper.getRandom(0, 9);
-        int smallL1 = Helper.getRandom(0, 25);
-        int smallL2 = Helper.getRandom(0, 25);
-        int bigL1 = Helper.getRandom(0, 25);
-        int bigL2 = Helper.getRandom(0, 25);
+        int symbol1 = Helper.getRandom(0, symbol.length-1);
+        int number1 = Helper.getRandom(0, number.length-1);
+        int number2 = Helper.getRandom(0, number.length-1);
+        int number3 = Helper.getRandom(0, number.length-1);
+        int smallL1 = Helper.getRandom(0, smallL.length-1);
+        int smallL2 = Helper.getRandom(0, smallL.length-1);
+        int bigL1 = Helper.getRandom(0, bigL.length-1);
+        int bigL2 = Helper.getRandom(0, bigL.length-1);
 
         password[0] = symbol[symbol1];
         password[1] = number[number1];
@@ -29,7 +29,7 @@ public class Password {
         password[7] = bigL[bigL2];
 
         for (int i = 0; i < password.length; i++) {
-            Helper.swapChar(password, i, Helper.getRandom(0, 7));
+            Helper.swapChar(password, i, Helper.getRandom(0, password.length-1));
 
         }
         System.out.println(password);
